@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doctor Login</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -97,28 +89,3 @@ a {
 a:hover {
     text-decoration: underline;
 }
-
-    </style>
-</head>
-<body>
-    <div class="login-container">
-        <div class="login-box">
-            <h2>Doctor Login</h2>
-            <form action="" method="POST">
-                <div class="input-container">
-                    {% csrf_token %}
-                    <input type="email" id="id" name="email" required>
-                    <label for="email">Doctor mail</label>
-                </div>
-                <div class="input-container">
-                    <input type="password" id="password" name="password" required>
-                    <label for="password">Password</label>
-                </div>
-                <button type="submit">Login</button>
-            </form>
-            <p>Don't have an account? <a href="signup">Sign up here</a></p>
-            <p>Forgot password? <a href="forgot">Click here</a></p>
-        </div>
-    </div>
-</body>
-</html>
