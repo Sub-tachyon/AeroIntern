@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device Registration</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+    <div class="login-box">
+        <h1>Device Registration</h1>
+    <form action="{% url 'device_reg2' %}" method="POST"> 
+        {% csrf_token %}
+        <label for="serial_number">Serial Number:</label>
+        <input type="text" id="serial_number" name="serial_number" required><br><br>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br><br>
+        
+        <label for="model">Model:</label>
+        <input type="text" id="model" name="model"><br><br>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</div>
+</body>
+</html>

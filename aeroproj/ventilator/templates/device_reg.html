@@ -1,0 +1,27 @@
+    {% load static %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Device Registration</title>
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Device Registration</h2>
+                <form action="" method="POST">
+                    <p>{{ msg }}</a></p>
+                    <div class="input-container">
+                        {% csrf_token %}
+                        <label for="id">Doctor Email </label>
+                        <input type="text" id="id" name="email" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                    <p>Added previously? <a href="devices.html">Monitor existing devices</a></p>
+                </form>
+            </div>
+        </div>
+    </body>
+    </html>

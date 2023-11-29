@@ -1,17 +1,42 @@
+
+
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>OTP Verification</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Authentication</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- Add Google Translate Material Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-    <h1>Enter OTP</h1>
-    <form action="{% url 'otp_verification' %}" method="post">
-        {% csrf_token %}
-        <label for="otp">OTP:</label><br>
-        <input type="text" id="otp" name="otp" maxlength="6" pattern="[0-9]{6}" required>
-        <br><br>
-        <input type="submit" value="Verify OTP">
-    </form>
+    <div class="left-container">
+        <p style="color:#007BFF">Aerobiosys<br>Innovations</p>
+    </div>
+
+    <div class="right-container">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>OTP Authentication</h2>
+                <form action="{% url 'otp_verification' %}" method="POST">
+                    <div class="input-container">
+                        {% csrf_token %}
+                        <label for="otp" class="otp-input">Enter the 6-digit OTP</label>
+                        <input type="text" id="otp" name="otp" title="Enter a valid 6-digit OTP" maxlength="6" pattern="[0-9]{6}" required>
+                    </div>
+                    <div class="input-container">
+                        <button type="submit">Verify OTP</button>
+                    </div>
+                    <p>{{ error_message }}</a></p>
+                </form>
+            </div>
+            <!-- Google Translate Material Icon -->
+            <div class="google-translate-icon">
+                <i class="material-icons">language</i>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

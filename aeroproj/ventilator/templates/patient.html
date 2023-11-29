@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Enter Patient Information</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Enter Patient Information</h1>
+            <form method="post" action="{% url 'patient' %}"> 
+                {% csrf_token %} 
+                
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="patient_id">Patient ID:</label><br>
+                <input type="text" id="patient_id" name="patient_id" required><br><br>
+                
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age" required><br><br>
+                
+                <label for="gender">Gender:</label><br>
+                <select id="gender" name="gender" required>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                    <option value="O">Other</option>
+                </select><br><br>
+                
+                <label for="status">Status:</label><br>
+                <select id="status" name="status" required>
+                    <option value="PASSIVE">Passive</option>
+                    <option value="EMERGENCY">Emergency</option>
+                </select><br><br>             
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

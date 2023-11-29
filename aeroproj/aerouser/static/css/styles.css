@@ -1,12 +1,17 @@
 body {
     margin: 0;
-    padding: 0;
+    padding: 30px;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f3f3f3;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     min-height: 100vh;
+}
+.left-container {
+    padding: 10px;
+    text-align: left;
+    font-size: 90px;
 }
 
 .login-container {
@@ -14,7 +19,7 @@ body {
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 300px;
+    width: 500px;
     text-align: center;
 }
 
@@ -43,6 +48,7 @@ form {
     color: #333;
     background-color: transparent;
     outline: none;
+    
 }
 
 .input-container label {
@@ -52,6 +58,16 @@ form {
     font-size: 16px;
     color: #999;
     transition: 0.2s;
+    display: inline-block;
+}
+.checkbox-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.checkbox-container label {
+    margin-left: -80px; /* Adjust as needed for spacing between checkbox and label */
+    white-space: nowrap;
 }
 
 .input-container input:focus + label,
